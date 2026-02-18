@@ -2,15 +2,29 @@ import React from 'react'
 import { motion } from 'motion/react'
 
 const Reviews = ({ photo, name, profession, review }) => {
+
+
+    let parent = {
+        hidden: { opacity: 0, y: -90 },
+        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.17, ease: "easeOut", duration: 1.2 } }
+
+    }
+    let children = {
+        hidden: { opacity: 0, y: -70 },
+        visible: { opacity: 1, y: 0 }
+    }
+
+
+
     return (
-        <div className='border mb-3 w-full p-5 rounded-2xl hover:scale-110 transition-all duration-200 ease-in-out'>
-            <div className='flex justify-center md:justify-start'>
+        <motion.div variants={parent} initial="hidden" whileInView={"visible"} viewport={{ once: true, amount:0.3 }} className='border mb-3 w-full p-5 rounded-2xl hover:scale-110 transition-all duration-200 ease-in-out'>
+            <motion.div variants={children} className='flex justify-center md:justify-start'>
                 <img className='w-15 h-15 rounded-full object-cover loading-lazy' src={photo} alt="image" />
-            </div>
-            <h1 className='text-xl font-semibold mb-2'>{name}</h1>
-            <h1 className='text-m mb-8 underline'>{profession}</h1>
-            <p className='mt-3 text-sm'>{review}</p>
-        </div>
+            </motion.div>
+            <motion.h1 variants={children} className='text-xl font-semibold mb-2'>{name}</motion.h1>
+            <motion.h1 variants={children} className='text-m mb-8 underline'>{profession}</motion.h1>
+            <motion.p variants={children} className='mt-3 text-lg'>{review}</motion.p>
+        </motion.div>
     )
 }
 
