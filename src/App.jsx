@@ -15,7 +15,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='min-h-screen mx-auto  bg-slate-100 dark:bg-linear-to-br dark:from-blue-900 dark:via-slate-500 dark:to-rose-500 text-black dark:text-white'>
+    <div className='min-h-screen mx-auto  bg-slate-100 dark:bg-slate-900 text-black dark:text-white'>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />

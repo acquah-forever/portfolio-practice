@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import About from '../components/About'
 import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import Footer from '../components/Footer'
@@ -59,6 +60,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <About />
       <div className='bg-linear-to-br from-emerald-300 via-gray-100 shadow-2xl rounded-2xl to-sky-500 h-100 mx-8 sm:mx-15 mb-20 flex justify-center px-20 items-center'>
       <Skills />
       </div>

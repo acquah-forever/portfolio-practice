@@ -4,10 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { Menu, Moon, X } from 'lucide-react'
 import useMenu from '../hooks/useMenu'
 
-
-
 const NavBar = () => {
-
 
   let [mobileMenuIsOpen, toggleMenu] = useMenu()
 
