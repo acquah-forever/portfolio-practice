@@ -5,6 +5,7 @@ import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Form from './components/Form'
 import Reviews from './components/Reviews'
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/hero' element={<Hero />} />
         <Route path='/form' element={<Form />} />
         <Route path='/skills' element={<Skills />} />
+        <Route path='/projects' element ={<Projects />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/footer' element={<Footer />} />
       </Routes>

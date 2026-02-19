@@ -5,12 +5,12 @@ const Reviews = ({ photo, name, profession, review }) => {
 
 
     let parent = {
-        hidden: { opacity: 0, y: -90 },
-        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.17, ease: "easeOut", duration: 1.2 } }
+        hidden: { opacity: 0, y: -70 },
+        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.17, ease: "easeOut", duration: 0.8 } }
 
     }
     let children = {
-        hidden: { opacity: 0, y: -70 },
+        hidden: { opacity: 0, y:-70 },
         visible: { opacity: 1, y: 0 }
     }
 
