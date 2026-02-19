@@ -1,56 +1,40 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-import { yupResolver } from '@hookform/resolvers/yup'
+import { Send } from "lucide-react"
 
 const Form = () => {
-    
-    let schema = yup.object().shape({
-        firstname: yup.string().required('Your first name is required.'),
-        lastname: yup.string().required('Your last name is required.'),
-        email: yup.string().email().required('Your email is required.'),
-        mobile: yup.string().min(10,'Phone number must have at least 10 digits').required(),
-        details: yup.string().required('Message is required.')
-    })
 
-
-    let { register, handleSubmit, formState: { errors } } = useForm({
-        resolver: yupResolver(schema),
-    })
-    function onSubmit(data) {
-        console.log(data)
-         
-
+    let parent = {
+        hidden:{opacity:0, y:-70},
+        visible:{opacity:1, y:0, transition: { staggerChilderen:0.22, ease:"easOut", duration:0.7}}
+    }
+    let children={
+        hidden:{opacity:0, y:-71},
+        visible:{opacity:1, y:0}
     }
 
     return (
-        <div className='flex flex-col items-center justify-center space-y-3 mt-10'>
-            <h1 className='text-xl md:text-2xl'>Reach Out To Me. Lets Talk 🙂</h1>
-            <form className="flex flex-col space-y-1 w-65 sm:w-80 md:w-90 lg:w-100 p-4 dark:border shadow-2xl rounded-lg" onSubmit={handleSubmit(onSubmit)}>
-                <label className='pl-2 text-sm'>First Name</label>
-                <p className='text-red-500 dark:text-red-400 text-sm pl-2'>{errors.firstname?.message}</p>
-                <input className='mb-4 p-2 dark:outline-white outline-sky-400' type="text" placeholder='Enter your First Name' {...register('firstname')} />
+        <div  className='min-h-screen p-20 flex flex-col'>
+            <motion.form variants={parent} initial="hidden" whileInView="visible" viewport={{once:true, amount:0.4}} className='max-w-5xl space-y-7'>
+                <h1 className='mb-10 text-5xl text-center sm:text-left font-bold'>Contact Me</h1>
+                <div className='flex flex-col space-y-5 justify-center'>
 
-                <label className='pl-2 text-sm'>Last Name</label>
-                <p className='text-red-500 dark:text-red-400 text-sm pl-2'>{errors.lastname?.message}</p>
-                <input className='mb-4 p-2 dark:outline-white outline-sky-400' type="text" placeholder='Enter your Last Name' {...register('lastname')} />
-
-                <label className='pl-2 text-sm'>Email</label>
-                <p className='text-red-500 dark:text-red-400 text-sm pl-2'>{errors.email?.message}</p>
-                <input className='mb-4 p-2 dark:outline-white outline-sky-400' type="text" placeholder='Enter your Email' {...register('email')} />
-
-                <label className='pl-2 text-sm'>Phone Number</label>
-                <p className='text-red-500 dark:text-red-400 text-sm pl-2'>{errors.mobile?.message}</p>
-                <input className='mb-4 p-2 dark:outline-white outline-sky-400' type="tel" placeholder='Enter your Phone Number' {...register('mobile')} />
-
-                <label className='pl-2 text-sm'>Message</label>
-                <p className='text-red-500 dark:text-red-400 text-sm pl-2'>{errors.details?.message}</p>
-                <input className='mb-4 p-2 h-17 dark:outline-white outline-sky-400' type="text" placeholder='Enter Message' {...register('details')} />
-                <motion.div whileHover={{scale:1.2, y:-2}} whileTap={{scale:1, y:-15}} transition={{type:'spring', stiffness:400, damping:10}} className='flex justify-center'><input className='bg-emerald-400 cursor-pointer w-30 px-7 py-3 rounded text-center' type="submit" /></motion.div>
-            </form>
+                    <motion.div variants={children} className='flex items-center justify-between'><input className='w-full placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md px-5 shadow-lg border rounded-xl h-12' type="text" placeholder='Subject' /></motion.div>
+                    
+                    <motion.div variants={children} className='flex flex-col space-y-5 md:grid grid-cols-2 sm:gap-3'>
+                        <input className='placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md px-5 shadow-lg border rounded-xl h-12' type="text" placeholder='Your Email Address'  />
+                        <input className='placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md px-5 shadow-lg border rounded-xl h-12' type="text" placeholder='Your Name' />
+                    </motion.div>
+                </div>
+                <motion.textarea variants={children} className='placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md shadow-lg px-5 pt-5 border rounded-xl resize-none w-full h-70' placeholder='Enter Message'></motion.textarea>
+                <div className='flex justify-center sm:justify-between'>
+                    <motion.button variants={children} className='flex sm:flex justify-start bg-sky-500 px-3.5 py-2.5 rounded-lg text-white space-x-3'>
+                        <Send />
+                        <h1>Send Message</h1>
+                    </motion.button>
+                </div>
+            </motion.form>
         </div>
-
     )
 }
 

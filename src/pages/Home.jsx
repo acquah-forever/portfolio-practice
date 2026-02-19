@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
+import Form from '../components/Form'
 import Footer from '../components/Footer'
 import babe from '../assets/babe.jpg'
 import babe1 from '../assets/babe1.jpg'
@@ -74,6 +75,7 @@ const Home = () => {
           review={data.review} />
         ))}
       </div>
+      <Form />
       <Footer />
     </div>
   )
