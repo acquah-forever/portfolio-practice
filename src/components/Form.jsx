@@ -8,9 +8,9 @@ import { Send } from "lucide-react"
 const Form = () => {
 
     let schema = yup.object().shape({
-        subject: yup.string().required('Enter Relevant Details'),
-        email: yup.string().required('Enter Relevant Details'),
-        name: yup.string().required('Enter Relevant Details')
+        subject: yup.string().required('Please Fill Relevant Details.'),
+        email: yup.string().required('Please Fill Relevant Details.'),
+        name: yup.string().required('Please Fill Relevant Details.')
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({
