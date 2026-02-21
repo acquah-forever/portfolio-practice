@@ -66,7 +66,7 @@ const Home = () => {
       <Skills />
       </div>
       <h1 className='text-center text-4xl tracking-tight font-semibold'>Reviews From Peers</h1>
-      <div className='mt-10 mb-10 justify-items-center grid grid-cols-1 justify-center px-20 gap-x-16 gap-y-7 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {datum.map(data => (<Reviews
           key={data.id}
           photo={data.photo}

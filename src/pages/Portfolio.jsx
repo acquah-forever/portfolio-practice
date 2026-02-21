@@ -13,7 +13,8 @@ const Portfolio = () => {
     {
       id: 1,
       photo: Landing,
-      description: 'A page exhibiting my skills in React JS, Tailwind and JavaScript',
+      title: 'LANDING PAGE',
+      description: 'Exhibiting my skills in React JS, Tailwind and JavaScript',
       js: javascript,
       tail: tailwind,
       react: react
@@ -21,7 +22,26 @@ const Portfolio = () => {
     {
       id: 2,
       photo: Landing1,
-      description: 'A page exhibiting my skills in Recat JS, Tailwind and Javascript',
+      title: 'AI AUTOMATION PAGE',
+      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
+      js: javascript,
+      tail: tailwind,
+      react: react
+    },
+    {
+      id: 3,
+      photo: Landing1,
+      title: 'AI AUTOMATION PAGE',
+      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
+      js: javascript,
+      tail: tailwind,
+      react: react
+    },
+    {
+      id: 4,
+      photo: Landing1,
+      title: 'AI AUTOMATION PAGE',
+      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
       js: javascript,
       tail: tailwind,
       react: react
@@ -30,14 +50,15 @@ const Portfolio = () => {
 
 
   return (
-    <div>
-      {data.map((e) =>(<Projects 
-      key={e.id}
-      photo={e.photo}
-      description={e.description}
-      js={e.js}
-      tail={e.tail}
-      react={e.react}
+    <div className='shadow-xl dark:shadow-indigo-500 p-10 gap-15 lg:gap-5 grid grid-cols-1 justify-items-center lg:grid-cols-3'>
+      {data.map((e) => (<Projects
+        key={e.id}
+        photo={e.photo}
+        title={e.title}
+        description={e.description}
+        js={e.js}
+        tail={e.tail}
+        react={e.react}
       />))}
     </div>
   )
