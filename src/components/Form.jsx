@@ -24,7 +24,7 @@ const Form = () => {
 
     let parent = {
         hidden: { opacity: 0, y: -70 },
-        visible: { opacity: 1, y: 0, transition: { staggerChilderen: 0.25, ease: "easOut", duration: 1.5 } }
+        visible: { opacity: 1, y: 0, transition: { staggerChilderen: 0.25, ease: "easOut", duration: 0.5 } }
     }
     let children = {
         hidden: { opacity: 0, y: -71 },
