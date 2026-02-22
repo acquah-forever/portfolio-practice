@@ -18,8 +18,8 @@ const Reviews = ({ photo, name, profession, review }) => {
 
     return (
         <motion.div variants={parent} initial="hidden" whileInView={"visible"} viewport={{ once: true, amount:0.3 }} className='border mb-3 w-full p-5 rounded-xl ease-in-out'>
-            <motion.div variants={children} whileHover={{scale:1.2,y:-12}} whileTap={{scale:0.9,y:-15}} transition className='flex justify-center md:justify-start'>
-                <img className='w-15 h-15 rounded-full object-cover loading-lazy' src={photo} alt="image" />
+            <motion.div variants={children} whileHover={{scale:1.2,y:-12}} whileTap={{scale:0.9,y:-15}} transition={{type:"spring",stiffness:200,damping:3}} className='inline-flex'>
+                <img className='cursor-pointer w-16 h-16 rounded-full object-cover' src={photo} alt="image" />
             </motion.div>
             <motion.h1 variants={children} className='text-xl font-semibold mb-2'>{name}</motion.h1>
             <motion.h1 variants={children} className='text-m mb-8 underline'>{profession}</motion.h1>
