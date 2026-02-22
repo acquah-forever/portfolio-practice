@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'motion/react'
+import { motion, scale } from 'motion/react'
 
 const Projects = ({ photo, title, description, js, tail, react }) => {
 
@@ -29,7 +29,7 @@ const Projects = ({ photo, title, description, js, tail, react }) => {
         <img className='w-10 h-10 object-contain' src={tail} alt="tailwind" />
         <img className='w-10 h-10 object-contain' src={react} alt="react" />
       </div>
-      <button className='mx-7 bg-emerald-400 p-2 rounded-md'>Launch</button>
+      <motion.button variants={children} whileHover={{scale:1.2,y:-7}} whileTap={{scale:0.9,y:-12}} transition={{type:"spring",stiffness:400,damping:10}}  className='cursor-pointer mx-7 bg-emerald-400 p-2 rounded-md'>Launch</motion.button>
 
     </motion.div>
   )
