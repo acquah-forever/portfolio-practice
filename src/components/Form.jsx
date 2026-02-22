@@ -47,9 +47,9 @@ const Form = () => {
                 <motion.textarea variants={children} className='placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md shadow-lg px-5 pt-5 border rounded-xl resize-none w-full h-70' placeholder='Enter Message'></motion.textarea>
                 <p className='text-red-500'>{errors.subject ?.message}</p>
                 <div className='flex justify-center sm:justify-between'>
-                    <motion.button variants={children} className='flex sm:flex justify-start bg-sky-500 px-3.5 py-2.5 rounded-lg text-white space-x-3'>
+                    <motion.button variants={children} whileHover={{scale:1.2,y:-10}} whileTap={{scale:0.9,y:-12}} transition={{type:"spring",stiffness:400,damping:10}} className='flex sm:flex justify-start bg-sky-500 px-3.5 py-2.5 rounded-lg text-white space-x-3'>
                         <Send />
-                        <h1>Send Message</h1>
+                        <h1 className='cursor-pointer'>Send Message</h1>
                     </motion.button>
                 </div>
             </motion.form>
