@@ -15,36 +15,36 @@ const Portfolio = () => {
       photo: Landing,
       title: 'LANDING PAGE',
       description: 'Exhibiting my skills in React JS, Tailwind and JavaScript',
-      js: javascript,
-      tail: tailwind,
-      react: react
+      jsicon: javascript,
+      tailwindicon: tailwind,
+      reacticon: react
     },
     {
       id: 2,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
       description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
-      js: javascript,
-      tail: tailwind,
-      react: react
+      jsicon: javascript,
+      tailwindicon: tailwind,
+      reacticon: react
     },
     {
       id: 3,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
       description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
-      js: javascript,
-      tail: tailwind,
-      react: react
+      jsicon: javascript,
+      tailwindicon: tailwind,
+      reacticon: react
     },
     {
       id: 4,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
       description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
-      js: javascript,
-      tail: tailwind,
-      react: react
+      jsicon: javascript,
+      tailwindicon: tailwind,
+      reacticon: react
     }
   ]
 
@@ -56,9 +56,9 @@ const Portfolio = () => {
         photo={e.photo}
         title={e.title}
         description={e.description}
-        js={e.js}
-        tail={e.tail}
-        react={e.react}
+        jsicon={e.jsicon}
+        tailwindicon={e.tailwindicon}
+        reacticon={e.reacticon}
       />))}
     </div>
   )

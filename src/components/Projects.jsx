@@ -1,7 +1,7 @@
 import React from 'react'
-import { motion, scale } from 'motion/react'
+import { motion} from 'motion/react'
 
-const Projects = ({ photo, title, description, js, tail, react }) => {
+const Projects = ({ photo, title, description, jsicon, tailwindicon, reacticon }) => {
 
   let parent = {
     hidden: { opacity: 0, y: -70 },
@@ -25,9 +25,9 @@ const Projects = ({ photo, title, description, js, tail, react }) => {
       </div>
 
       <div className='mb-7 flex justify-center gap-7 items-center loading-lazy'>
-        <img className='w-10 h-10 object-contain' src={js} alt="javascript" />
-        <img className='w-10 h-10 object-contain' src={tail} alt="tailwind" />
-        <img className='w-10 h-10 object-contain' src={react} alt="react" />
+        <img className='w-10 h-10 object-contain' src={jsicon} alt="javascript" />
+        <img className='w-10 h-10 object-contain' src={tailwindicon} alt="tailwind" />
+        <img className='w-10 h-10 object-contain' src={reacticon} alt="react" />
       </div>
       <motion.button variants={children} whileHover={{scale:1.2,y:-7}} whileTap={{scale:0.9,y:-12}} transition={{type:"spring",stiffness:400,damping:10}}  className='cursor-pointer mx-7 bg-emerald-400 p-2 rounded-md'>Launch</motion.button>
 
