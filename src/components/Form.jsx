@@ -34,7 +34,7 @@ const Form = () => {
     return (
         <div className='min-h-screen p-20 flex flex-col'>
             <motion.form variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.4 }} className='max-w-5xl space-y-7' onSubmit={handleSubmit(onSubmit)}>
-                <h1 className='mb-10 text-5xl text-center sm:text-left font-bold'>Contact Me</h1>
+                <h1 className='mb-10 text-5xl text-center bg-linear-to-r from-orange-600 to-amber-300 text-transparent bg-clip-text sm:text-left font-bold'>Contact Me</h1>
                 <div className='flex flex-col space-y-5 justify-center'>
 
                     <motion.div variants={children} className='flex items-center justify-between'><input className='w-full placeholder-slate-700 dark:placeholder-slate-300 text-sm sm:text-md px-5 shadow-lg border rounded-xl h-12' type="text" placeholder='Subject'{...register('subject')} /></motion.div>

@@ -50,7 +50,7 @@ const Portfolio = () => {
 
 
   return (
-    <div className='shadow-xl dark:shadow-indigo-500 p-10 gap-15 lg:gap-5 grid grid-cols-1 justify-items-center lg:grid-cols-3'>
+    <div className='shadow-xl p-10 gap-15 lg:gap-5 grid grid-cols-1 justify-items-center lg:grid-cols-3'>
       {data.map((e) => (<Projects
         key={e.id}
         photo={e.photo}

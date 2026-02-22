@@ -25,10 +25,10 @@ const NavBar = () => {
   return (
     <>
       <div className='sticky z-5 top-3 backdrop-blur-sm rounded mx-5 flex justify-between items-center px-5 py-2 shadow-2xl dark:shadow-none'>
-        <NavLink to={'/'}><h1 className='cursor-pointer text-lg hover:scale-115 transition-all ease-in-out duration-300'>Kojo Acquah <span className='cursor-pointer text-lg sm:text-xl lg:text-2xl text-sky-700 dark:text-sky-300 hover:scale-115 transition-all ease-in-out duration-400'>Addo</span></h1></NavLink>
+        <NavLink to={'/'}><h1 className='cursor-pointer text-lg hover:scale-115 transition-all ease-in-out duration-300'>Kojo Acquah{" "}<span className='cursor-pointer text-lg sm:text-xl lg:text-2xl bg-linear-to-r from-orange-600 to-amber-400 text-transparent bg-clip-text hover:scale-115 transition-all ease-in-out duration-400'>Addo</span></h1></NavLink>
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 
-          <ul className='hidden text-lg sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
+          <ul className='hidden text-2xl dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
             <NavLink to={'/'}><li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Home</li></NavLink>
             <NavLink to={'/portfolio'}><li className='cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Portfolio</li></NavLink>
           </ul>
