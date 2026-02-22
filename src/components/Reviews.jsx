@@ -22,7 +22,7 @@ const Reviews = ({ photo, name, profession, review }) => {
                 <img className='cursor-pointer w-16 h-16 rounded-full object-cover' src={photo} alt="image" />
             </motion.div>
             <motion.h1 variants={children} className='text-xl font-semibold mb-2'>{name}</motion.h1>
-            <motion.h1 variants={children} className='text-m mb-8 underline'>{profession}</motion.h1>
+            <motion.h1 variants={children} className='text-m inline-flex bg-linear-to-r from-orange-600 to-amber-500 text-transparent bg-clip-text mb-8 underline'>{profession}</motion.h1>
             <motion.p variants={children} className='mt-3 text-lg'>{review}</motion.p>
         </motion.div>
     )
