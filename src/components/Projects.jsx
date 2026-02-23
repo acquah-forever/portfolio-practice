@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion} from 'motion/react'
+import PropTypes from 'prop-types'
 
 const Projects = ({ photo, title, description, jsicon, tailwindicon, reacticon }) => {
 
@@ -33,6 +34,15 @@ const Projects = ({ photo, title, description, jsicon, tailwindicon, reacticon }
 
     </motion.div>
   )
+}
+
+Projects.PropTypes = {
+  photo: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  jsicon: PropTypes.string,
+  tailwindicon: PropTypes.string,
+  reacticon: PropTypes.string
 }
 
 export default Projects
