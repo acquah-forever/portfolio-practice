@@ -41,7 +41,7 @@ const Portfolio = () => {
       id: 4,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
-      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
+      description: 'Exhibiting skills in Recat JS, Tailwind and Javascript',
       jsicon: javascript,
       tailwindicon: tailwind,
       reacticon: react
