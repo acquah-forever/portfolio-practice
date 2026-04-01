@@ -22,11 +22,11 @@ const Projects = (props) => {
       <div>
         <h1 className='mb-7 text-2xl font-semibold text-center'>{props.title}</h1>
         <h2 className='px-2 mb-7 text-center text-base sm:text-md'>{props.description}</h2>
-        <h1 className='w-full mb-7 text-xl font-semibold text-center'>BUILT WITH:</h1>s
+        <h1 className='w-full mb-7 text-xl font-semibold text-center'>BUILT WITH:</h1>
       </div>
 
       <div className='mb-7 flex justify-center gap-7 items-center loading-lazy'>
-        <img className='w-10 h-10 object-contain' src={jprops.sicon} alt="javascript" />
+        <img className='w-10 h-10 object-contain' src={props.jsicon} alt="javascript" />
         <img className='w-10 h-10 object-contain' src={props.tailwindicon} alt="tailwind" />
         <img className='w-10 h-10 object-contain' src={props.reacticon} alt="react" />
       </div>
