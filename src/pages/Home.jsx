@@ -48,7 +48,7 @@ const Home = () => {
       photo: babe4,
       name: 'Bunny',
       profession: 'QA Manager',
-      review: 'I can attest to the exceptional services when I employed Mr. Acquah.'
+      review: 'I can testify to the exceptional services when I employed Mr. Acquah.'
     },
     {
       id: 6,
