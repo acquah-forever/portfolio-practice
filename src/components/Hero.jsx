@@ -5,15 +5,10 @@ import Profile from '../assets/bus.jpeg'
 
 const Hero = () => {
     return (
-        <motion.div initial={{opacity:0, y:-60}} animate={{opacity:1, y:0}} transition={{duration:0.4, ease:'easeInOut'}} className='flex flex-col-reverse p-10 mt-7 md:flex-row justify-center items-center md:min-h-screen space-x-25'>
-            <div className='space-y-2 text-center ml-25 md:text-left'>
-                <h1 className='text-5xl mb-5 md:text-6xl lg:text-8xl'>Hi, I'm Kojo</h1>
-                <h2 className='text-2xl mb-4 md:text-3xl lg:text-4xl bg-linear-to-r from-orange-700 to-amber-500 text-transparent bg-clip-text'>Frontend Developer</h2>
-                <h2 className='text-lg md:text-xl lg:text-2xl mb-23'>Expert In Software Development.</h2>
-                <motion.button whileHover={{scale: 1.2, y:-2}} whileTap={{scale: 0.9, y:-2}} transition={{type:"spring", stiffness:450, damping:10}} className='cursor-pointer list-none bg-sky-400 dark:bg-emerald-400 px-6 py-4 rounded w-40 text-center'>Lets Connect</motion.button>
-            </div>
-            <div>
-                <img className='shadow-2xl  dark:shadow-white  hover:scale-110 transition-all ease-linear duration-150 w-40 h-auto mb-7 sm:w-60 md:w-70 lg:w-90 object-cover rounded-full' src={Profile} alt="profile-pic" />
+        <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className='relative md:min-h-screen bg-[url("https://cdn.pixabay.com/photo/2019/10/03/12/12/javascript-4523100_1280.jpg")] bg-cover bg-center bg-fixed bg-no-repeat'>
+            <div className='absolute inset-0 bg-black/30'></div>
+            <div className='relative z-50'>
+               
             </div>
         </motion.div>
     )
