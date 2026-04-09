@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
-import Portfolio from './pages/Portfolio'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
@@ -15,11 +14,10 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='min-h-screen mx-auto py-4 bg-slate-100 dark:bg-slate-900 text-black dark:text-white'>
+    <div className='min-h-screen mx-auto'>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/hero' element={<Hero />} />
         <Route path='/form' element={<Form />} />
         <Route path='/skills' element={<Skills />} />
