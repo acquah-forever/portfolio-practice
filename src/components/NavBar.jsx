@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className='bg-black fixed top-0 w-full z-5 text-white flex justify-between items-center px-5 py-3'>
+      <div className='bg-black fixed top-0 w-full z-60 text-white flex justify-between items-center px-5 py-3'>
         <NavLink to={'/'}><h1 className='cursor-pointer text-xl hover:scale-115 transition-all ease-in-out duration-300'>Kojo Addo</h1></NavLink>
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 
@@ -42,10 +42,10 @@ const NavBar = () => {
         {mobileMenuIsOpen && (
           <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-5 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-7 mb-7'>
             <motion.li variants={children}>
-              <li className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Home</li>
+             <NavLink to={'/'}><a className='cursor-pointer text-lg tracking-tight' onClick={() => toggleMenu(false)}>Home</a></NavLink> 
             </motion.li>
             <motion.li variants={children}>
-              <li className='text-sm tracking-tight' onClick={() => toggleMenu(false)}>Project</li>
+             <NavLink to={'/projects'}><a className='cursor-pointer text-lg tracking-tight' onClick={() => toggleMenu(false)}>Projects</a></NavLink>
             </motion.li>
           </motion.ul>
         )}
