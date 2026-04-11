@@ -1,10 +1,12 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import { HashLink } from 'react-router-hash-link'
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import { getData } from '../data/data'
 
 const Hero = () => {
-    const [activeTab,setActiveTab] = useState('')
+    const [activeTab, setActiveTab] = useState('Bio')
+    const data = getData()
 
     return (
         <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="relative bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat">
@@ -42,17 +44,12 @@ const Hero = () => {
                         </div>
                         <div className='border-t mt-2 border-slate-400'></div>
                         <div className='flex space-x-1 p-1 '>
-                            <div className='bg-sky-600 p-2 rounded-tr-lg px-4 border-2 border-white'>
-                                <button className='text-white cursor-pointer'>Bio</button>
-                            </div>
-                            <div className='bg-sky-600 p-2 rounded-t-lg px-4 border-2 border-white'>
-                                <button className='text-white cursor-pointer border-white'>Projects</button>
-                            </div>
-                            <div className='bg-sky-600 p-2 rounded-t-lg px-4 border-2 border-white'>
-                                <button className='text-white cursor-pointer border-white'>Skills</button>
-                            </div>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Bio' ? "bg-sky-500 border" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Bio')}>Bio</button>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Projects' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Projects')}>Projects</button>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Skills' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Skills')}>Skills</button>
+
                         </div>
-                    
+
                     </div>
 
                 </div>
