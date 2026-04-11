@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className='bg-black fixed top-0 w-full z-60 text-white flex justify-between items-center px-10 py-3'>
+      <div className='bg-black fixed w-full top-0 left-0 z-60 text-white flex justify-between items-center px-10 py-3'>
         <HashLink smooth to={'/#hero'}><h1 className='cursor-pointer text-lg hover:scale-115 transition-all ease-in-out duration-300'>Kojo</h1></HashLink>
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 

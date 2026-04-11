@@ -1,34 +1,55 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import {HashLink} from 'react-router-hash-link'
-import {Facebook,Twitter,Instagram,Youtube} from 'lucide-react'
+import { HashLink } from 'react-router-hash-link'
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 
 
 
 const Hero = () => {
 
     return (
-        <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className='relative min-h-screen bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat'>
-            <div className='absolute inset-0 bg-black/20 z-10'></div>
-            <div className='relative z-20 px-16'>
-                <section className='mx-auto flex min-h-screen max-w-6xl justify-center items-center px-6'id='hero'>
-                    <div className='space-y-10'>
-                        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white text-center sm:text-left'>Hi, I'm Kojo Acquah Addo</h1>
-                        <h2 className='mt-4 max-w-xl line-clamp-2 text-center sm:text-left text-xl sm:text-3xl md:text-4xl text-white/90'>Frontend Developer focused on Clean UI and Reliable Products.</h2>
-                        <div className='bg-slate-100/60 flex items-center justify-center py-2 rounded-full space-x-2 border max-w-60'>
-                            <div className='bg-green-500 w-3 h-3 rounded-full'></div>
-                            <h3 className='text-md'>Available for Opportunities</h3>
+        <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="relative bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat">
+            <div className="absolute inset-0 bg-black/20 z-10"></div>
+            <div className="relative z-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-6xl">
+                    <div className="w-full max-w-xl flex flex-col h-100 justify-center items-center md:items-start gap-4">
+                        <div className='px-2 sm:px-4'>
+                            <div className="px-3 bg-slate-100/60 flex items-center rounded-full py-1 gap-2 border w-fit">
+                                <span className="w-3 h-3 bg-green-500 rounded-full" />
+                                <span className="text-xs font-semibold">Available for Opportunities</span>
+                            </div>
                         </div>
-                        <div className='flex justify-center sm:justify-start gap-5'>
-                           <HashLink smooth to={'/'}><Facebook className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain'/></HashLink> 
-                            <HashLink smooth to={'/'}><Twitter className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain' /></HashLink>
-                            <HashLink smooth to={'/'}><Instagram className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain' /></HashLink>
-                            <HashLink smooth to={'/'}><Youtube className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain' /></HashLink>
-                 
+                        <h1 className="px-2 sm:px-4 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">Hi, I'm Kojo Addo</h1>
+                        <p className="text-lg sm:text-2xl px-2 sm:px-4  font-semibold">FrontEnd Developer</p>
+                        <div className="px-2 sm:px-4 flex gap-3">
+                            <Facebook className="w-6 h-6" />
+                            <Twitter className="w-6 h-6" />
+                            <Instagram className="w-6 h-6" />
+                            <Youtube className="w-6 h-6" />
+                        </div>
+                        <div className="px-2 sm:px-4 mt-3">
+                            <HashLink smooth to="/projects" className="bg-sky-500 hover:bg-sky-600 transition px-6 py-3 rounded-full text-white">View My Work</HashLink>
                         </div>
                     </div>
-                </section>
+
+                    <div className="w-full max-w-sm aspect-4/3 rounded-2xl border bg-slate-200/60  mx-auto md:mx-0">
+                        <div className='flex items-center mt-3'>
+                            <div className='px-3 flex space-x-1'>
+                                <div className='w-3 h-3 bg-red-400 rounded-full'></div>
+                                <div className='w-3 h-3 bg-amber-300 rounded-full'></div>
+                                <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+                            </div>
+                            <h1 className='pl-4 font-mono text-sm text-slate-600'>kojo acquah addo</h1>
+                        </div>
+                        <div className='border-t mt-2 border-slate-400'></div>
+                        <div>
+                            <button>Bio</button>
+                            <button>Projects</button>
+                            <button>Skills</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </motion.div>
     )
