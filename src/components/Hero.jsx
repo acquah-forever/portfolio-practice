@@ -1,11 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { motion } from 'motion/react'
 import { HashLink } from 'react-router-hash-link'
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 
-
-
 const Hero = () => {
+    const [activeTab,setActiveTab] = useState('')
 
     return (
         <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="relative bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat">
@@ -32,7 +31,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="w-full max-w-sm aspect-4/3 rounded-2xl border bg-slate-200/60  mx-auto md:mx-0">
+                    <div className="w-full max-w-md aspect-4/3 rounded-2xl border bg-slate-200/60  mx-auto md:mx-0">
                         <div className='flex items-center mt-3'>
                             <div className='px-3 flex space-x-1'>
                                 <div className='w-3 h-3 bg-red-400 rounded-full'></div>
@@ -42,17 +41,18 @@ const Hero = () => {
                             <h1 className='pl-4 font-mono text-sm text-slate-600'>kojo acquah addo</h1>
                         </div>
                         <div className='border-t mt-2 border-slate-400'></div>
-                        <div className='flex space-x-2 p-1'>
-                            <div className='bg-sky-600 p-2 rounded-tr-lg px-4'>
-                                <button className='text-white'>Bio</button>
+                        <div className='flex space-x-1 p-1 '>
+                            <div className='bg-sky-600 p-2 rounded-tr-lg px-4 border-2 border-white'>
+                                <button className='text-white cursor-pointer'>Bio</button>
                             </div>
-                            <div className='bg-sky-600 p-2 rounded-t-lg px-4'>
-                                <button className='text-white'>Bio</button>
+                            <div className='bg-sky-600 p-2 rounded-t-lg px-4 border-2 border-white'>
+                                <button className='text-white cursor-pointer border-white'>Projects</button>
                             </div>
-                            <div className='bg-sky-600 p-2 rounded-t-lg px-4'>
-                                <button className='text-white'>Bio</button>
+                            <div className='bg-sky-600 p-2 rounded-t-lg px-4 border-2 border-white'>
+                                <button className='text-white cursor-pointer border-white'>Skills</button>
                             </div>
                         </div>
+                    
                     </div>
 
                 </div>
