@@ -42,10 +42,16 @@ const Hero = () => {
                             <h1 className='pl-4 font-mono text-sm text-slate-600'>kojo acquah addo</h1>
                         </div>
                         <div className='border-t mt-2 border-slate-400'></div>
-                        <div>
-                            <button>Bio</button>
-                            <button>Projects</button>
-                            <button>Skills</button>
+                        <div className='flex space-x-2 p-1'>
+                            <div className='bg-sky-600 p-2 rounded-tr-lg px-4'>
+                                <button className='text-white'>Bio</button>
+                            </div>
+                            <div className='bg-sky-600 p-2 rounded-t-lg px-4'>
+                                <button className='text-white'>Bio</button>
+                            </div>
+                            <div className='bg-sky-600 p-2 rounded-t-lg px-4'>
+                                <button className='text-white'>Bio</button>
+                            </div>
                         </div>
                     </div>
 
