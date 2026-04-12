@@ -47,7 +47,7 @@ const NavBar = () => {
             <motion.li variants={children}>
               <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#hero'} onClick={() => toggleMenu(false)}>Home</HashLink>
             </motion.li>
-            <motion.li variants={children} text-white>
+            <motion.li variants={children}>
               <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#about'} onClick={() => toggleMenu(false)}>About</HashLink>
             </motion.li>
             <motion.li variants={children}>

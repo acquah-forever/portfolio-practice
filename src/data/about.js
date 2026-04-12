@@ -8,7 +8,7 @@ const data2 = {
 
 
     
-    Currently enhancing my prowers in 
+    Currently enhancing my prowess in 
     Typescript and Rest APIs
     `,
 

@@ -5,7 +5,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const About = () => {
-    const [activeTab,setActiveTab] = useState('About.jsx')
+    const [activeTab,setActiveTab] = useState('About')
 
     const data2 = getAbout()
 
@@ -50,8 +50,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className='border-t mt-2 border-slate-400'></div>
-                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'About.jsx' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('About')}>About</button>
-                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'Comment.jsx' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('Comment')}>Comment</button>
+                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'About' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('About')}>About</button>
+                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'Comment' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('Comment')}>Comment</button>
                 <div className='mt-1'>
                     <SyntaxHighlighter language='javascript' style={nightOwl}>{data2[activeTab]}</SyntaxHighlighter>
                 </div>

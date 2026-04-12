@@ -19,7 +19,7 @@ const data = {
 
     function App(){
     const [projects, setProjects] =  
-    useState("realEstate","blog", "eCommerce");
+    useState(["realEstate","blog", "eCommerce"]);
 
     return(
          <div>
@@ -34,7 +34,7 @@ const data = {
 
     function App(){
      const [skills, setSkills] = 
-     useState("react","javascript");
+     useState(["react","javascript"]);
 
     return(
          <div>
