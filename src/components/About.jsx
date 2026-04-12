@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { motion } from "motion/react"
+import {getAbout} from '../data/about'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const About = () => {
+    const [activeTab,setActiveTab] = useState('About.jsx')
+
+    const data2 = getAbout()
 
     let parent = {
         hidden: { opacity: 0, y: -90 },
@@ -31,11 +37,26 @@ const About = () => {
                 </div>
                 <div>
                     <h1 className='text-center text-sky-500 font-bold text-3xl'>∞</h1>
-                    <h1 className='text-md'>Relaxing</h1>
+                    <h1 className='text-md'>Coding</h1>
                 </div>
             </div>
 
+            <div className="w-full max-w-lg aspect-4/3 rounded-2xl border  bg-slate-300 mx-auto md:mx-0">
+                <div className='flex items-center mt-3'>
+                    <div className='px-3 flex space-x-1'>
+                        <div className='w-3 h-3 bg-red-400 rounded-full'></div>
+                        <div className='w-3 h-3 bg-amber-300 rounded-full'></div>
+                        <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+                    </div>
+                </div>
+                <div className='border-t mt-2 border-slate-400'></div>
+                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'About.jsx' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('About')}>About</button>
+                <button className={`px- mx-1 mt-1 cursor-pointer text-white p-3  rounded-t-xl ${activeTab === 'Comment.jsx' ? "bg-sky-500" : "bg-sky-800"}`}onClick={() => setActiveTab('Comment')}>Comment</button>
+                <div className='mt-1'>
+                    <SyntaxHighlighter language='javascript' style={nightOwl}>{data2[activeTab]}</SyntaxHighlighter>
+                </div>
 
+            </div>
 
         </motion.div>
     )

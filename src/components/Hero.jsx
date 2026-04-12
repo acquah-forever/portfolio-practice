@@ -35,14 +35,13 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="w-full max-w-xl aspect-4/3 rounded-2xl border bg-slate-400/50  mx-auto md:mx-0">
+                    <div className="w-full max-w-lg aspect-4/3 rounded-2xl border bg-slate-400/50  mx-auto md:mx-0">
                         <div className='flex items-center mt-3'>
                             <div className='px-3 flex space-x-1'>
                                 <div className='w-3 h-3 bg-red-400 rounded-full'></div>
                                 <div className='w-3 h-3 bg-amber-300 rounded-full'></div>
                                 <div className='w-3 h-3 bg-green-500 rounded-full'></div>
                             </div>
-                            
                         </div>
                         <div className='border-t mt-2 border-slate-400'></div>
                         <div className='flex space-x-1 p-1 '>
