@@ -1,10 +1,14 @@
 import React from 'react'
-import { FileCode } from 'lucide-react'
 
-const Skills = () => {
+
+const Skills = ({ front }) => {
+
     return (
-        <div>
-
+        <div className='flex'>
+            <div>
+                <div>{front.svg}</div>
+                <div>{front.name}</div>
+            </div>
         </div>
     )
 }
