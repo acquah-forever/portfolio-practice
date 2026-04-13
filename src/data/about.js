@@ -2,27 +2,15 @@ const data2 = {
     "About": `
     About Me
     
-    I build clean, accessible and performative web 
+    I build clean and performative web 
     applications with modern tools.
-
-
-
     
     Currently enhancing my prowess in 
     Typescript and Rest APIs
     `,
 
     "Comment": `
-    leave a comment
-
-
-
-
-
-
-
-
-    
+    leave a comment    
     `
 }
 export function getAbout() {

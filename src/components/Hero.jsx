@@ -35,7 +35,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="w-full max-w-lg aspect-4/3 rounded-2xl border bg-slate-400/50  mx-auto md:mx-0">
+                    <div className="w-full max-w-lg aspect-4/3  border bg-slate-400/50  mx-auto md:mx-0">
                         <div className='flex items-center mt-3'>
                             <div className='px-3 flex space-x-1'>
                                 <div className='w-3 h-3 bg-red-400 rounded-full'></div>
