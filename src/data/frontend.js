@@ -1,4 +1,4 @@
-const stack = [
+const frontend = [
     {
         id:1,
         name:"React"
@@ -23,3 +23,7 @@ const stack = [
         name:"Framer Motion"
     }
 ]
+
+export function getFunction(){
+    return frontend
+}
