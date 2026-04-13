@@ -28,7 +28,7 @@ const NavBar = () => {
           <ul className='hidden  sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#hero'}>Home</HashLink>
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#about'}>About</HashLink>
-            <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/skills'}>Skills</HashLink>
+            <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#skills'}>Skills</HashLink>
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/projects'}>Projects</HashLink>
 
           </ul>

@@ -10,9 +10,9 @@ const data2 = {
     user experiences and writing code 
     that scales effectively.
 
-    Continuously sharpening my proficiency in Git 
-    and REST APIs while expanding my capabilities 
-    across the full stack.
+    Continuously sharpening my proficiency in 
+    TypeScript and REST APIs while expanding my 
+    capabilities across the full stack.
     `,
 
     "Comment": `
