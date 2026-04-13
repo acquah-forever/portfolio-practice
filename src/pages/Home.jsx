@@ -2,79 +2,52 @@ import React from 'react'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
-import Reviews from '../components/Reviews'
+import ToolsSkills from '../components/ToolsSkills'
+import LearningSkills from '../components/LearningSkills'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
-import babe from '../assets/babe.jpg'
-import babe1 from '../assets/babe1.jpg'
-import babe2 from '../assets/babe2.jpg'
-import babe3 from '../assets/babe3.jpg'
-import babe4 from '../assets/babe4.jpg'
-import babe5 from '../assets/babe5.jpg'
+import { getFrontend } from '../data/frontend'
+import { getTools } from '../data/tools'
+import { getLearning } from '../data/learning'
+
 
 
 const Home = () => {
-  let datum = [
-    {
-      id: 1,
-      photo: babe,
-      name: 'Baiden',
-      profession: 'Data Analyst',
-      review: 'Kojo always does amazing work for my projects. Never a dull moment.'
-    },
-    {
-      id: 2,
-      photo: babe1,
-      name: 'Turner',
-      profession: 'Developer',
-      review: 'His websites are always functional and you get what you asked for.'
-    },
-    {
-      id: 3,
-      photo: babe2,
-      name: 'Abigail',
-      profession: 'Tester',
-      review: 'Employing the services of Kojo has always been one of my best decisions with regards to my E-Commerce site.'
-    },
-    {
-      id: 4,
-      photo: babe3,
-      name: 'Titi',
-      profession: 'Backend Developer',
-      review: 'I collaborate with Addo and I must say, working with him is always a brezze with no roadblocks😙.'
-    },
-    {
-      id: 5,
-      photo: babe4,
-      name: 'Bunny',
-      profession: 'QA Manager',
-      review: 'I can testify to the exceptional services when I employed Mr. Acquah.'
-    },
-    {
-      id: 6,
-      photo: babe5, 
-      name: 'Stacey',
-      profession: 'Software Engineer',
-      review: 'Top notch products and delivery from Kojo.'
-    }
-  ]
+  const frontend = getFrontend()
+  const tools = getTools()
+  const learning = getLearning()
+
   return (
     <div>
-      <Hero />
-      <About />
-      <div className='bg-linear-to-br from-emerald-300 via-gray-100 shadow-2xl rounded-2xl to-sky-500 h-100 mx-8 sm:mx-15 mb-20 flex justify-center px-20 items-center'>
-      <Skills />
+      <div>
+        <Hero />
       </div>
-      <h1 className='px-15 mb-7 uppercase text-center text-4xl tracking-tight font-semibold'>Reviews From Peers</h1>
-      <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-15'>
-        {datum.map(data => (<Reviews
-          key={data.id}
-          photo={data.photo}
-          name={data.name}
-          profession={data.profession}
-          review={data.review} />
-        ))}
+      <div className='mx-20 mb-20'>
+        <About />
       </div>
+      <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold  mb-5 sm:mb-7 text-center'>Tech <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Stack</span></h1>
+      <div className='px-20'>
+        <h1 className='font-mono text-2xl font-semibold'>//FrontEnd</h1>
+
+        <div id='skills' className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
+          {frontend.map((front) => (<Skills
+            front={front} key={front.id}
+          />))}
+        </div>
+
+        <h1 className='font-mono text-2xl font-semibold'>//Tools</h1>
+        <div id='skills' className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
+          {tools.map((tool) => (<ToolsSkills
+            tool={tool} key={tool.id} />))}
+        </div>
+
+        <h1 className='font-mono text-2xl font-semibold'>//Learning</h1>
+        <div id='skills' className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
+          {learning.map((learn) => (<LearningSkills
+            learn={learn} key={learn.id} />))}
+        </div>
+      </div>
+
       <Form />
       <Footer />
     </div>
