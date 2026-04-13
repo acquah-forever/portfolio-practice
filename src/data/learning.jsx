@@ -13,7 +13,7 @@ const learning = [
     {
         id:3,
         svg:Funnel,
-        name:"Node JS"
+        name:"Node.js"
     }
 ]
 

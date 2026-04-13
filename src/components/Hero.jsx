@@ -45,9 +45,9 @@ const Hero = () => {
                         </div>
                         <div className='border-t mt-2 border-slate-400'></div>
                         <div className='flex space-x-1 p-1 '>
-                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Bio' ? "bg-sky-500 border" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Bio')}>Bio</button>
-                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Projects' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Projects')}>Projects</button>
-                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Skills' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`}onClick={() => setActiveTab('Skills')}>Skills</button>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Bio' ? "bg-sky-500 border" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`} onClick={() => setActiveTab('Bio')}>Bio</button>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Projects' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`} onClick={() => setActiveTab('Projects')}>Projects</button>
+                            <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Skills' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`} onClick={() => setActiveTab('Skills')}>Skills</button>
                         </div>
 
                         <div>
