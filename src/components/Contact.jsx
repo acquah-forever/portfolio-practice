@@ -38,8 +38,8 @@ const Contact = () => {
           <input className='border p-2 max-w-lg w-full' type="text" placeholder='Enter Message'  {...register('text', { required: "Enter Your Message" })} />
         </div>
         {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
-        <div className='flex justify-start mt-7'>
-          <button className='bg-emerald-400 p-3 rounded  cursor-pointer' type='submit'>Submit</button>
+        <div className='flex justify-start mt-4'>
+          <motion.button variants={children} whileHover={{scale:1.2}} whileTap={{scale:0.65}} transition={{type:'spring', stiffness: 500, damping:7}} className='bg-emerald-400 p-3 rounded cursor-pointer' type='submit'>Submit</motion.button>
         </div>
       </motion.form>
 
