@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 
 let parent = {
     hidden: { opacity: 0, y: -70 },
-    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.25, duration: 0.7 } }
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.24, duration: 0.7 } }
 }
 
 let children = {
