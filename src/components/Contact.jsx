@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
         {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
         <div className='flex justify-start mt-7'>
-          <button className='bg-emerald-400 p-3 rounded hover:bg-emerald-300 hover:scale-110 transition-all duration-200 cursor-pointer' type='submit'>Submit</button>
+          <button className='bg-emerald-400 p-3 rounded  cursor-pointer' type='submit'>Submit</button>
         </div>
       </motion.form>
 
