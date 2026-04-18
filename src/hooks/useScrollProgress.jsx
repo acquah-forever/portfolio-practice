@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-const useScrollProgress = () => {
-    const [scrollProgress, setScrollProgress] = useState(calculateScrollProgress)
+const useScrollProgress = (initialValue = calculateScrollProgress ) => {
+    const [state = scrollProgress, setState] = useState(initialValue)
 
     function calculateScrollProgress() {
         const totalHeight = document.documentElement.scrollHeight -
@@ -13,7 +13,7 @@ const useScrollProgress = () => {
     useEffect(() => {
 
         function handleScroll() {
-            setScrollProgress(calculateScrollProgress())
+            setState(calculateScrollProgress())
         } 
 
         window.addEventListener("scroll", handleScroll)
