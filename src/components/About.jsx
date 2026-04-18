@@ -32,7 +32,7 @@ const About = () => {
                     </p>
                 </motion.div>
 
-                <div variants={children} className='flex flex-wrap gap-4 sm:gap-6 justify-start'>
+                <motion.div variants={children} className='flex flex-wrap gap-4 sm:gap-6 justify-start'>
 
                     <motion.div variants={children}>
                         <h1 className='text-center text-sky-500 font-bold text-3xl sm:text-4xl'>5+</h1>
@@ -49,7 +49,7 @@ const About = () => {
                         <h1 className='text-sm sm:text-base text-slate-700 dark:text-slate-400'>Coding</h1>
                     </motion.div>
 
-                </div>
+                </motion.div>
 
             </motion.div>
 

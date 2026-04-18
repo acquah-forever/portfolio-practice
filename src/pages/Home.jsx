@@ -30,10 +30,10 @@ const Home = () => {
 
   return (
     <div>
-      <div>
+      <div id='hero'>
         <Hero />
       </div>
-      <div className='mx-4 mb-20 sm:mx-8 lg:mx-20'>
+      <div id='about' className='mx-4 mb-20 sm:mx-8 lg:mx-20'>
         <About />
       </div>
       <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount:0.4 }} id='skills'>

@@ -29,17 +29,25 @@ const Contact = () => {
   }
 
   return (
-    <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{once:false, amount: 0.4}} className='space-y-10 flex flex-col justify-center items-center p-10'>
+    <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.4 }} className='space-y-10 flex flex-col justify-center items-center p-10'>
       <motion.h1 variants={children} className=' text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-7'>Lets <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Connect</span></motion.h1>
       <motion.h2 variants={children} className='font-mono text-xl md:text-2xl'>Open to FrontEnd roles and collaboration.</motion.h2>
       <motion.form variants={children} className='max-w-xl w-full' onSubmit={handleSubmit(onSubmit)}>
-        <div className='flex space-x-5 items-center mb-7'>
-          <label className='font-mono'>Message</label>
-          <input className='border p-2 max-w-lg w-full' type="text" placeholder='Enter Message'  {...register('text', { required: "Enter Your Message" })} />
+
+        <div className='flex space-x-9 items-center mb-7'>
+          <label className='font-mono'>Email</label>
+          <input className='input bg-slate-200 border p-2 max-w-lg w-full' type="email" placeholder='Enter Email'  {...register('email', { required: "Enter Your Email" })} />
         </div>
         {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
+
+        <div className='flex space-x-5 items-center mb-7'>
+          <label className='font-mono'>Message</label>
+          <textarea className='textarea bg-slate-200 border-black p-2 max-w-lg w-full' type="text" placeholder='Enter Message'  {...register('text', { required: "Enter Your Message" })} />
+        </div>
+        {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
+
         <div className='flex justify-start mt-4'>
-          <motion.button variants={children} whileHover={{scale:1.2}} whileTap={{scale:0.65}} transition={{type:'spring', stiffness: 500, damping:7}} className='bg-emerald-400 p-3 rounded cursor-pointer' type='submit'>Submit</motion.button>
+          <motion.button variants={children} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.65 }} transition={{ type: 'spring', stiffness: 500, damping: 7 }} className='bg-emerald-400 p-3 rounded cursor-pointer' type='submit'>Submit</motion.button>
         </div>
       </motion.form>
 
