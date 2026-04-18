@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion, scale } from 'motion/react'
+import { motion } from 'motion/react'
 import { HashLink } from 'react-router-hash-link'
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import { getData } from '../data/data'
