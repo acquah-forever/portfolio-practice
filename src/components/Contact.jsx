@@ -38,7 +38,7 @@ const Contact = () => {
           <label className='font-mono'>Email</label>
           <input className='input bg-slate-200 border p-2 max-w-lg w-full' type="email" placeholder='Enter Email'  {...register('email', { required: "Enter Your Email" })} />
         </div>
-        {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
+        {errors.email && <p className='text-red-500 font-mono text-center'>{errors.email.message}</p>}
 
         <div className='flex space-x-5 items-center mb-7'>
           <label className='font-mono'>Message</label>
