@@ -2,10 +2,10 @@ import React from 'react'
 import useScrollProgress  from '../hooks/useScrollProgress'
 
 const ProgressBar = () => {
-    const[scrollProgress] = useScrollProgress()
+    const scrollProgress = useScrollProgress()
   return (
-    <div className='fixed top-0 left-0 w-full h-1 bg-indigo-400 z-50'>
-        <div className='h-full' style={{width : `${scrollProgress}`}}>
+    <div className='fixed top-13 left-0 w-full h-1 bg-gray-200 z-50'>
+        <div className='h-full bg-linear-to-r from-blue-500 to-purple-600 transition all duration-150' style={{width : `${scrollProgress}%`}}>
         </div>
     </div>
   )

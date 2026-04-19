@@ -3,6 +3,8 @@ import { HashLink } from 'react-router-hash-link'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 import useMenu from '../hooks/useMenu'
+import ProgressBar from '../components/ProgressBar'
+
 
 const NavBar = () => {
 
@@ -20,6 +22,7 @@ const NavBar = () => {
   }
 
   return (
+    
     <div>
       <div className='bg-black fixed w-full top-0 left-0 z-60 text-white flex justify-between items-center px-10 py-3'>
         <HashLink smooth to={'/#hero'}><h1 className='cursor-pointer text-lg hover:scale-115 transition-all ease-in-out duration-300'>Kojo</h1></HashLink>
@@ -39,10 +42,13 @@ const NavBar = () => {
               {mobileMenuIsOpen ? (<X className='sm:hidden flex w-5 h-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300' />) : (<Menu className='sm:hidden flex w-5 h-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300' />)}
             </button>
           </div>
-
         </div>
-
       </div >
+      
+      <ProgressBar />
+      
+
+
       <AnimatePresence>
         {mobileMenuIsOpen && (
           <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='bg-slate-400/80 fixed z-30 top-5 flex flex-col px-10 py-3 space-y-3 h-55 mt-7 mb-7 w-full sm:hidden'>
@@ -64,6 +70,7 @@ const NavBar = () => {
           </motion.ul>
         )}
       </AnimatePresence>
+      
     </div>
 
 
