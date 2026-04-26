@@ -8,7 +8,7 @@ const Skills = ({ front }) => {
             <div className='text-sky-500'>
                 <LucideComponent size={25} />
             </div>
-            <div className='text-center font-semibold text-sm'>{front.name}</div>
+            <div className='text-center font-semibold text-sm '>{front.name}</div>
         </div>
     )
 }
