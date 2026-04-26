@@ -38,17 +38,21 @@ const Contact = () => {
           <label className='font-mono'>Email</label>
           <input className='input bg-slate-200 border p-2 max-w-lg w-full' type="email" placeholder='Enter Email'  {...register('email', { required: "Enter Your Email" })} />
         </div>
-        <div className='mt-3 mb-3'>
-          {errors.email && <p className='text-red-500 font-mono text-center'>{errors.email.message}</p>}
-        </div>
+        {errors.email && (
+          <div className='mt-3 mb-3'>
+            <p className='text-red-500 font-mono text-center'>{errors.email.message}</p>
+          </div>
+        )}
 
         <div className='flex space-x-5 items-center mb-2'>
           <label className='font-mono'>Message</label>
           <textarea className='textarea bg-slate-200 border-black p-2 max-w-lg w-full' type="text" placeholder='Enter Message'  {...register('text', { required: "Enter Your Message" })} />
         </div>
-        <div className='mt-3 mb-3'>
-          {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
-        </div>
+        {errors.text && (
+          <div className='mt-3 mb-3'>
+            <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>
+          </div>
+        )}
 
         <div className='flex justify-start mt-4'>
           <motion.button variants={children} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.65 }} transition={{ type: 'spring', stiffness: 500, damping: 7 }} className='bg-emerald-400 p-3 rounded cursor-pointer' type='submit'>Submit</motion.button>
